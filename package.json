@@ -1,0 +1,13 @@
+{
+  "name": "inspired",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Dioni Mercado <me@dionimercado.com>",
+  "license": "MIT",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss assets/css/inspired.css -w"
+  },
+  "dependencies": {
+    "node-sass": "^4.9.2"
+  }
+}
