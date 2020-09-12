@@ -8,6 +8,6 @@
     "compile:sass": "node-sass sass/main.scss assets/css/inspired.css -w"
   },
   "dependencies": {
-    "node-sass": "^4.9.2"
+    "node-sass": "^4.13.1"
   }
 }
