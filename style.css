@@ -5,3 +5,358 @@ Version: 1.0.0
 Author: Dioni Mercado
 Author URI: http://dionimercado.com
 */
+
+body {
+  background-color: #fff;
+  padding-top: 80px;
+}
+
+:focus,
+button:focus,
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.heading{
+	text-align: center;
+}
+.heading span{
+	font-family: 'Allura', cursive;
+  font-size: 3rem;
+	color:#cd094a;
+	line-height: 30px;
+}
+.heading h1{
+	color:#333;
+	letter-spacing: 2px;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.heading hr{
+	background-color: #333333;
+	height: 2px;
+	width: 100px;
+	border: none;
+	margin-top: 10px;
+}
+.page-header {
+  font-family: 'Poppins', sans-serif;
+}
+.page-header h1 {
+  font-weight: 700;
+  color: #fff;
+}
+.page-header h1 span{
+  color: #cd094a;
+}
+
+
+.headerNav {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-bottom: 4px solid #cd094a;
+  width: 100%;
+  z-index: 99;
+  font-family: 'Poppins', sans-serif;
+}
+
+.headerNav .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+
+
+.headerNav .navbar-nav .nav-link {
+  color: #160d11;
+  text-transform: uppercase;
+  padding-right: .8rem;
+  padding-left: .8rem;
+}
+
+.headerNav .navbar-nav .active>.nav-link{
+  color: #fff;
+  background-color: #cd094a;
+  padding: 0 5px;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.headerNav .navbar-nav .nav-link:hover {
+  color: #cd094a;
+}
+
+.headerNav .dropdown ul {
+  display: block;
+  background-color: rgba(0,0,0,.85);
+  left: 0;
+  list-style: outside none none;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  visibility: hidden;
+  -webkit-transform-origin: left top 0;
+  transform-origin: left top 0;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  width: 240px;
+  padding: 16px 11px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+  transform: translatey(25px);
+  -webkit-transform: translatey(25px);
+  text-align: left;
+  border: 0;
+  border-radius: 0;
+
+}
+
+.headerNav .nav-item:hover ul {
+  opacity: 1;
+  visibility: visible;
+  transform: translatey(0px);
+  -webkit-transform: translatey(0px);
+}
+
+.headerNav .dropdown-item {
+  font-size: 1rem;
+  color: #fff;
+}
+.headerNav .dropdown-item:hover {
+  background-color: transparent;
+  font-size: 1rem;
+  color: #cd094a;
+}
+
+
+.homeSlider {
+  background-color: #000;
+  width: 100vw;
+  overflow: hidden;
+  /* height: 100vh; */
+}
+
+
+
+.footer {
+  border-top: 4px solid #cd094a;
+  background-color: rgba(0,0,0,.9);
+  color: rgba(255, 255, 255, 0.5);
+}
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+}
+.social-icons a {
+  font-size: 16px;
+  margin: 0 2px;
+  border: 2px solid rgba(255,255,255,0);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: rgba(255,255,255,.6);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.social-icons a:hover {
+  border: 2px solid rgba(255,255,255,0);
+  color: #fff;
+}
+
+/*---resevation---*/
+.resevation{
+	background: url('https://inspiredevents.nyc/wp-content/uploads/2019/05/rsvp-bg.jpg') center center no-repeat;
+	background-size: cover;
+  background-attachment: fixed;
+}
+.time-info-outer {
+    background-color: rgba(0, 0, 0, 0.80);
+    padding: 30px;
+}
+.time-info-inner {
+    border: 1px dashed rgba(255,255,255,0.30);
+}
+.resevation .heading{
+	margin-top: 30px;
+}
+.resevation .time-info .heading h1{
+	color: #fff;
+}
+.resevation .time-info .heading hr{
+	background-color: #fff;
+}
+.time-info p{
+	color: #fff;
+	font-weight: 300;
+}
+.resevation-block {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+}
+.reservation-form {
+	margin-top: 40px;
+}
+.reservation-form .rtb-booking-form fieldset > div {
+  width: 31%;
+  float: left;
+  margin-right: 3.5%;
+}
+.reservation-form .rtb-booking-form fieldset > div:nth-of-type(3n+3) {
+  margin-right: 0;
+}
+
+.reservation-form input,
+.reservation-form select {
+  -webkit-appearance: none;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  box-shadow: none;
+  height: 46px;
+  padding: 0 12px;
+  width: 100%;
+  max-width: 100% !important;
+  background-color: #fff;
+}
+
+.reservation-form button {
+  background-color: transparent;
+  color: #cd094a;
+  border: 2px solid #cd094a;
+  border-radius: 50px;
+  padding: 8px 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 37px;
+  transition: all .3s ease;
+}
+.reservation-form button:hover {
+  background-color: #cd094a;
+  color: #fff;
+
+}
+
+.rtb-booking-form legend {
+  display: none;
+}
+
+
+
+#newsletter{
+  background-color: #cd094a;
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+#newsletter h3{
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+}
+#newsletter form{
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+#newsletter form .input-group .form-control{
+  border: 0;
+  height: 42px;
+}
+#newsletter form .btn-primary {
+  border-radius: 50px;
+  color: #fff;
+  border-color: transparent;
+  background-color: #160d11;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: .5rem 2rem !important;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+#newsletter form .btn-primary:hover,
+#newsletter form .btn-primary:focus{
+  border-color: transparent;
+  background-color: #ff831a;
+}
+
+footer.footer {
+  position: relative;
+  color: rgba(255, 255, 255, 1);
+  background-image: url('https://inspiredevents.nyc/wp-content/uploads/2019/05/footer-bg.jpg');
+  background-attachment: fixed;
+  background-position: top center;
+  background-attachment: initial;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  padding: 50px 0 20px;
+  font-family: "Cardo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+footer.footer::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(51, 22, 35, .90);
+  left: 0;
+  top: 0;
+}
+footer.footer a {
+  color: rgba(255, 255, 255, 1);
+  display: inline-block;
+  cursor: pointer;
+}
+footer.footer a:hover {
+  color: white;
+}
+footer.footer h4{
+  color: #df0047;
+}
+footer.footer p {
+  font-size: 20px;
+}
+footer.footer .contact-details {
+  margin: 75px 0;
+}
+footer.footer .social {
+  margin-bottom: 75px;
+}
+footer.footer .social a{
+  color: #fff;
+}
+footer.footer .social a:hover{
+  color: #df0047;
+}
+footer.footer .copyright p.small {
+  font-size: 14px;
+}
+
+footer.footer .copyright {
+  font-size: 14px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .heading h1 {
+    font-size: 2rem;
+  }
+
+
+  .headerNav .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(0, 0, 0, 0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+  }
+}
