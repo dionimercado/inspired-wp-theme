@@ -60,6 +60,9 @@ input:focus {
   width: 100%;
   z-index: 99;
   font-family: 'Poppins', sans-serif;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
 }
 
 .headerNav .navbar-toggler-icon {
@@ -84,9 +87,12 @@ input:focus {
   font-size: 15px;
 }
 
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover,
 .headerNav .navbar-nav .nav-link:hover {
   color: #cd094a;
 }
+
+
 
 .headerNav .dropdown ul {
   display: block;
@@ -171,17 +177,22 @@ input:focus {
 }
 
 /*---resevation---*/
+#rsvp {
+	backdrop-filter: blur(10px);
+}
 .resevation{
-	background: url('https://inspiredevents.nyc/wp-content/uploads/2019/05/rsvp-bg.jpg') center center no-repeat;
+	background: url('https://inspiredevents.nyc/wp-content/uploads/2020/09/rsvp-bg.jpg') center center no-repeat;
 	background-size: cover;
   background-attachment: fixed;
 }
 .time-info-outer {
     background-color: rgba(0, 0, 0, 0.80);
     padding: 30px;
+	height: 100%;
 }
 .time-info-inner {
     border: 1px dashed rgba(255,255,255,0.30);
+	height: 100%;
 }
 .resevation .heading{
 	margin-top: 30px;
@@ -294,9 +305,9 @@ input:focus {
 footer.footer {
   position: relative;
   color: rgba(255, 255, 255, 1);
-  background-image: url('https://inspiredevents.nyc/wp-content/uploads/2019/05/footer-bg.jpg');
+  background-image: url('https://inspiredevents.nyc/wp-content/uploads/2020/09/rsvp-bg.jpg');
   background-attachment: fixed;
-  background-position: top center;
+  background-position: center center;
   background-attachment: initial;
   -webkit-background-size: cover;
   -moz-background-size: cover;

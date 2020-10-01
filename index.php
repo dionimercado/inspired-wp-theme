@@ -1,26 +1,31 @@
-<?php get_header() ?>
+<?php
+/* Template Name: Homepage */
 
-<section>
+get_header();
+?>
+
+<section id="home">
   <?php echo do_shortcode('[rev_slider alias="home-slider"]') ?>
 </section>
 
 <section id="about" class="py-5 my-5">
   <div class="container">
-    <div class="heading">
+    <div class="heading mb-5">
       <span class="dart-fs-48">Welcome to</span>
       <h1>Inspired Events</h1>
       <hr>
     </div>
     <div class="row">
-      <div class="col-md-4 h-100">
+      <div class="col-md-4 order-2 h-100">
         <div class="h-100">
-          <img src="https://inspiredevents.nyc/wp-content/uploads/2019/05/about.jpg" alt="About Us" class="w-100 h-auto">
+          <img src="https://inspiredevents.nyc/wp-content/uploads/2020/09/about-us.jpg" alt="About Us" class="w-100" style="height: 340px; object-fit: cover;">
         </div>
       </div>
-      <div class="col-md-8 text-black-50">
-        <p>We realize that each person is unique and in a different stage of the planning process. It is for this reason that we create custom proposals based on the following services. Please contact Inpisred Events directly so that we can discuss our services and learn more about your vision.</p>
+      <div class="col-md-8 order-1 text-black-50">
+        <?php the_content() ?>
+        <!-- <p>We realize that each person is unique and in a different stage of the planning process. It is for this reason that we create custom proposals based on the following services. Please contact Inpisred Events directly so that we can discuss our services and learn more about your vision.</p>
         <p><strong>Mision:</strong> From weddings to social events, private parties and joyous occasions, it’s about creating an unforgettable experience that takes the guest through a day, an evening, or even a weekend-long celebration, that is reflective of that client.</p>
-        <p><strong>Vision:</strong> Inspired Events believes that a successful event requires unique and personalize attention to every detail. Event Designing was born from our deep passion for creating stylish events that make a statement through creativity, detailed organization and design. We pride ourselves in staying savvy about the hottest trends in the industry, but our true passion comes from infusing amazingly innovative concepts, which is what makes each event unique.</p>
+        <p><strong>Vision:</strong> Inspired Events believes that a successful event requires unique and personalize attention to every detail. Event Designing was born from our deep passion for creating stylish events that make a statement through creativity, detailed organization and design. We pride ourselves in staying savvy about the hottest trends in the industry, but our true passion comes from infusing amazingly innovative concepts, which is what makes each event unique.</p> -->
       </div>
     </div>
   </div>
@@ -29,7 +34,7 @@
 <section id="resevation" class="resevation py-5">
   <div id="rsvp" class="container">
     <div class="row dart-no-gutter">
-      <div class="col-md-4 col-sm-4 mr-md-0 pr-md-0">
+      <div class="col-lg-4 col-md-6 mr-md-0 pr-md-0">
         <div class="time-info time-info-outer">
           <div class="time-info-inner">
             <div class="heading">
@@ -37,9 +42,17 @@
               <h1>Package</h1>
               <hr>
             </div>
-            <div class="open-time dart-pt-20 text-center">
-              <p>
-                6 hours rental<br>
+            <div class="open-time dart-pt-20 text-center mt-4 mt-md-5">
+              <?php if( have_rows('services') ): ?>
+                <ul class="list-unstyled">
+                  <?php while( have_rows('services') ) : the_row(); ?>
+                    <li class="text-white"><?php the_sub_field('service'); ?></li>
+                  <?php endwhile; ?>
+                </ul>
+              <?php endif; ?>
+
+              <p class="d-none">
+                5 hours rental<br>
                 Bartender<br>
                 Ice maker machine<br>
                 Beverage cooler<br>
@@ -60,7 +73,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-8 col-sm-8 ml-md-0 pl-md-0">
+      <div class="col-lg-8 col-md-6 ml-md-0 pl-md-0">
         <div class="resevation-block">
           <div class="heading">
             <span class="dart-fs-48">Reservation</span>
@@ -114,7 +127,7 @@
   </div>
 </section>
 
-<section style="margin-bottom: -8px;">
+<section id="contact" style="margin-bottom: -8px;">
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3018.173150928777!2d-73.90508484866609!3d40.84612207921616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1c319a2f9d118a68!2sInspired+Events!5e0!3m2!1sen!2sus!4v1542080204648" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
 </section>
 

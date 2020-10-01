@@ -1,10 +1,10 @@
-
 <footer id="contact" class="footer py-3 text-center">
   <div class="container">
     <div class="row">
       <div class="col-md-4 contact-details mt-5 mb-3">
         <h4><i class="fa fa-phone"></i> Call</h4>
         <p>(347) 582-8049</p>
+        <p>(718) 872-5266</p>
       </div>
       <div class="col-md-4 contact-details mb-3 mt-0 mt-md-5">
         <h4><i class="fa fa-map-marker"></i> Visit</h4>
